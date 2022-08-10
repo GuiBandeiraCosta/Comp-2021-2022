@@ -1,0 +1,1 @@
+./l22 --target asm -g ../auto-tests/$1.l22;yasm -felf32 ../auto-tests/$1.asm;ld -m elf_i386 -o main $1.o ../../projetoSimple/librts5-202103031636/*.o;./main > zficheiro.output;diff zficheiro.output ../auto-tests/expected/$1.out;echo "Passaste!!!";
